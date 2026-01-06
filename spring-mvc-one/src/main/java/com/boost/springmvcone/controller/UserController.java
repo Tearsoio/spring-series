@@ -54,4 +54,15 @@ public class UserController {
     public UserVo addUser(@RequestBody UserVo userVo) {
         return userVo;
     }
+
+
+    /**
+     *DeleteMapping方法也可以使用路径参数，但是为了提升性能一般不用
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/del")
+    public Boolean deleteUser(@RequestParam("id") Long id) {
+        return true;
+    }
 }
